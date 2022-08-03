@@ -1,13 +1,19 @@
-<div class="container">
+<div class="TaskInput">
 <mat-form-field>
   <mat-label>Nazwa Taska</mat-label>
   <input matInput #taskinput placeholder="nowy task" #input>
 </mat-form-field>
 <button mat-button type="button" (click)='add()'>Add</button>
-<mat-list *ngFor="let item of list.list">
-    <div class="group">
-      <input type="checkbox" id={{item.id}} (click)="changeDone(item.id)"/>
-      <label>{{item.name}}</label>
+</div>
+<div class="container">
+  <div class="tasks">
+    <h3>To Do</h3>
+    <app-TodoItem *ngFor="let item of list.list | taskfilter:false">
+    </app-TodoItem>
   </div>
-</mat-list>
+  <div class="tasks">
+  <h3>Done</h3>
+  <app-TodoItem *ngFor="let item of list.list | taskfilter:true">
+  </app-TodoItem>
+</div>
 </div>

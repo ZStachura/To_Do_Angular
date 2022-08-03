@@ -1,0 +1,5 @@
+<div class="group" *ngFor="let item of list.list">
+  <input type="checkbox" id={{item.id}} [checked]="item.done" (click)="changeDone(item.id)"/>
+  <label>{{item.name}}</label>
+  <button type="button" class="delete-btn" (click)="delete(item.id)"></button>
+</div>

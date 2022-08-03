@@ -20,10 +20,5 @@ export class AppComponent {
     this.input.value="";
     this.input.focus();
   }
-  changeDone(id:number){
-   let index=this.list.list.findIndex((obj=>obj.id==id))
-   this.list.list[index].done=!this.list.list[index].done
-   console.log(this.list.list[index])
-  }
 
 }

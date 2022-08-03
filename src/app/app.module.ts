@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list';
+
 import { ToDoServiceService } from './ToDoService.service';
-import { TodoItemComponentComponent } from './TodoItemComponent/TodoItemComponent.component';
+import { TodoItemComponent } from './TodoItem/TodoItem.component';
+import { TaskfilterPipe } from './taskfilter.pipe';
 
 @NgModule({
-  declarations: [	
+  declarations: [			
     AppComponent,
-      TodoItemComponentComponent
+    TodoItemComponent,
+      TaskfilterPipe
    ],
   imports: [
     BrowserModule,
@@ -21,7 +25,8 @@ import { TodoItemComponentComponent } from './TodoItemComponent/TodoItemComponen
     FormsModule,
     MatButtonModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ],
   providers: [ToDoServiceService],
   bootstrap: [AppComponent]

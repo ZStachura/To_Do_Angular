@@ -2,19 +2,27 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
-.container{
+.TaskInput{
   padding: 48px;
-  height: 100vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+.container{
+  padding: 20px;
+  height: 10vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
 }
 .container .group {
   padding: 8px 48px;
   margin: 8px;
+justify-content: space-between;
 }
 label {
   position: relative;
+  
 }
 input[type="checkbox"] {
     opacity: 0;
@@ -48,4 +56,10 @@ label::after {
   left: -42px;
   top: -6px;
   border-radius: 50%;
+}
+
+.delete-btn {
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-size: over;
 }
