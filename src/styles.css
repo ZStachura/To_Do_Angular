@@ -63,3 +63,20 @@ label::after {
   align-items: flex-end;
   background-size: over;
 }
+
+.tooltip-container {
+  text-align: center;
+  z-index: 100;
+  position: fixed;
+  padding: 6px 12px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  line-height: initial;
+  color: white;
+  width: auto;
+  background: #111111ee;
+  box-sizing: border-box;
+  opacity: 100;
+  transform: translate(-50%, -30%);
+  pointer-events: none;
+}

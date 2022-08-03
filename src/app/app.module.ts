@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,12 +13,14 @@ import { MatListModule } from '@angular/material/list';
 import { ToDoServiceService } from './ToDoService.service';
 import { TodoItemComponent } from './TodoItem/TodoItem.component';
 import { TaskfilterPipe } from './taskfilter.pipe';
+import { TooltipDirective } from './tooltip.directive';
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
     TodoItemComponent,
-      TaskfilterPipe
+      TaskfilterPipe,
+      TooltipDirective
    ],
   imports: [
     BrowserModule,
@@ -26,7 +29,8 @@ import { TaskfilterPipe } from './taskfilter.pipe';
     MatButtonModule,
     MatInputModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    CommonModule
   ],
   providers: [ToDoServiceService],
   bootstrap: [AppComponent]
