@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+.container{
+  padding: 48px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .group {
+  padding: 8px 48px;
+  margin: 8px;
+}
+label {
+  position: relative;
+}
+input[type="checkbox"] {
+    opacity: 0;
+    transform: translateX(10px);
+}
+label::before {
+  content: "";
+  background: url("src/green.svg");
+  background-position: center;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: -44px;
+  top: -8px;
+
+  transform: scale(0) rotateZ(180deg);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+}
+
+input[type="checkbox"]:checked + label::before {
+  transform: scale(1) rotateZ(0deg);
+}
+
+label::after {
+  content: "";
+  border: 2px solid #27ae60;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -42px;
+  top: -6px;
+  border-radius: 50%;
+}
