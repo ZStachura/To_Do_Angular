@@ -1,5 +1,6 @@
 import { ListKeyManager } from '@angular/cdk/a11y';
 import { Component, Input, OnInit } from '@angular/core';
+import { Kanban } from '../Kanban';
 import { ToDoServiceService } from '../ToDoService.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { ToDoServiceService } from '../ToDoService.service';
 })
 export class TodoItemComponent implements OnInit {
 
+  @Input()
+  item!:Kanban;
   
   changeDone(id:number){
     this.list.changeDone(id)

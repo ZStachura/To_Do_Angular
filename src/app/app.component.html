@@ -8,12 +8,12 @@
 <div class="container">
   <div class="tasks">
     <h3>To Do</h3>
-    <app-TodoItem *ngFor="let item of list.list | taskfilter:false">
+    <app-TodoItem *ngFor="let item of list.list | taskfilter:false" [item]="item">
     </app-TodoItem>
   </div>
   <div class="tasks">
   <h3>Done</h3>
-  <app-TodoItem *ngFor="let item of list.list | taskfilter:true">
+  <app-TodoItem *ngFor="let item of list.list | taskfilter:true" [item]="item">
   </app-TodoItem>
 </div>
 </div>
