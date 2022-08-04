@@ -1,5 +1,8 @@
 <div class="group" [appTooltip]="this.item.doneCreated">
-  <input type="checkbox" id={{item.id}} [checked]="item.done" (click)="changeDone(item.id)"/>
-  <label>{{item.name}}</label>
-  <button type="button" class="delete-btn" (click)="delete(item.id)"></button>
+  <mat-checkbox type="checkbox" class="checkbox" [checked]="item.done" (click)="changeDone(item.id)">
+    <label>{{item.name}}</label>
+  </mat-checkbox>
+  <button mat-button  type="button" class="delete-btn" (click)="delete(item.id)">
+  <mat-icon [ngStyle]="{'color':'red'}">delete_forever</mat-icon >
+  </button>
 </div>

@@ -1,18 +1,23 @@
-<div class="TaskInput">
-<mat-form-field>
-  <mat-label>Nazwa Taska</mat-label>
-  <input matInput #taskinput placeholder="nowy task" #input>
-</mat-form-field>
-<button mat-button type="button" (click)='add()'>Add</button>
-</div>
 <div class="container">
+<div class="header">
+  <h1>My To Do List</h1>
+    <div class="taskInput">
+      <mat-form-field>
+        <mat-label>New Task</mat-label>
+        <input matInput #taskinput placeholder="new task" #input>
+      </mat-form-field>
+      <button mat-button class="add_btn" mat-button type="button" (click)='add()'>
+        <mat-icon>library_add</mat-icon>
+        Add</button>
+  </div>
+</div>
   <div class="tasks">
-    <h3>To Do</h3>
+    <h3 class="done_undone">To Do</h3>
     <app-TodoItem *ngFor="let item of list.list | taskfilter:false" [item]="item">
     </app-TodoItem>
   </div>
   <div class="tasks">
-  <h3>Done</h3>
+  <h3 class="done_undone" >Done</h3>
   <app-TodoItem *ngFor="let item of list.list | taskfilter:true" [item]="item">
   </app-TodoItem>
 </div>

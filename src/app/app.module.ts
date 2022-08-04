@@ -5,10 +5,12 @@ import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon'
 import { MatListModule } from '@angular/material/list';
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 import { ToDoServiceService } from './ToDoService.service';
 import { TodoItemComponent } from './TodoItem/TodoItem.component';
@@ -30,7 +32,8 @@ import { TooltipDirective } from './tooltip.directive';
     MatInputModule,
     MatListModule,
     MatIconModule,
-    CommonModule
+    CommonModule,
+    MatCheckboxModule
   ],
   providers: [ToDoServiceService],
   bootstrap: [AppComponent]

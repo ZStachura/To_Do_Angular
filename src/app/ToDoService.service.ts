@@ -10,7 +10,7 @@ export class ToDoServiceService {
   createTask(name:String){
     let done=false;
     let id=this.list.length+1;
-    let doneCreated="";
+    let doneCreated="not done yet";
     this.list.unshift({name,done,id,doneCreated});
     console.log(this.list);
   }
